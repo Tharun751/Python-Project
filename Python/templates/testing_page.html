@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Testing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>COVID-19 Testing Page</h1>
+
+        <div class="info-section">
+            <p>
+                To ensure the safety of individuals and communities, it's crucial to
+                test for COVID-19. Use the form below to add a new patient and their
+                testing information.
+            </p>
+            <img src="{{ url_for('static', filename='testing_image.jpg') }}" alt="Testing Image">
+        </div>
+
+        <form action="/add_patient" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <button type="submit">Add Patient</button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Testing Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to COVID-19 Testing Management</h1>
+
+        <div class="info-section">
+            <p>
+                COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus.
+                The outbreak of coronavirus has had a significant impact on education systems around the world. In China, where the virus originated, all schools and universities were closed for several weeks in an effort to contain the spread of the disease. Many other countries have followed suit, either closing schools altogether or suspending classes for a period of time.
+                This platform helps manage COVID-19 testing data efficiently.
+            </p>
+            <img src="{{ url_for('static', filename='covid19_image.jpg') }}" alt="COVID-19 Image">
+        </div>
+
+        <a href="{{ url_for('testing_page') }}" class="btn">Go to Testing Page</a>
+    </div>
+</body>
+</html>
